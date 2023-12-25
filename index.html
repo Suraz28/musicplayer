@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script src="script.js" defer></script>
+    <title>Music Player</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="musicPlayer">
+        <div class="nowPlaying">
+          <i id="myChevron" class="fa fa-chevron-down"></i
+          ><b class="headText">Now Playing</b>
+          <div
+            id="myBar"
+            class="bars"
+            style="box-shadow: 0 5px 5px rgba(126, 125, 125, 0.1)"
+          >
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+          </div>
+        </div>
+        <div class="image">
+          <img id="myImage" src="./images&mp3/mann jogiya.jpg" />
+        </div>
+
+        <div class="icons">
+          <span id="songName" class="bodyText">Mann Jogiya</span>
+          <i id="myHeartRegular" class="fa-regular fa-heart"></i>
+          <p id="artistInput" class="artist">Arijit Singh</p>
+          <i id="myEllipsis" class="fa fa-ellipsis-h"></i>
+          <div class="audio">
+            <audio id="myAudio" controls>
+              <source
+                id="mySource"
+                src="./images&mp3/Mann Jogiya [320] Kbps-(Mp3Jio.Com).mp3"
+                type="audio/mpeg"
+                accept=".mp3, audio"
+              />
+            </audio>
+            <input id="myProgress" type="range" value="0" />
+            <div class="songTime">
+              <p id="startTime"></p>
+              <p id="endTime"></p>
+            </div>
+            <div id="myIcons2" class="icons2">
+              <i id="myShuffle" class="fa-solid fa-shuffle"></i>
+              <i id="myBackward" class="fa fa-backward-step"></i>
+              <i id="myPlay" class="fa fa-play"></i>
+              <i id="myForward" class="fa fa-forward-step"></i>
+              <i id="myRepeat" class="fa fa-repeat"></i>
+            </div>
+          </div>
+        </div>
+        <div id="myNavbar" class="navbar">
+          <i id="myHome" class="fa fa-home fa-lg"></i>
+          <i id="myMagnifying" class="fa fa-magnifying-glass fa-lg"></i>
+          <i id="myMusic" class="fa fa-music fa-lg"></i>
+          <i id="myHeart" class="fa fa-heart fa-lg"></i>
+        </div>
+      </div>
+      <div id="Interface" class="interface">
+        <div class="selectaudio">
+          <input
+            type="file"
+            id="audioFileInput"
+            accept=".mp3"
+            style="display: none"
+          />
+          <label for="audioFileInput" id="selectAudioButton"
+            >Insert Audio</label
+          >
+        </div>
+        <div class="ullist">
+          <ul id="musicList">
+            <li>
+              <div id="songTimeEllipsis" class="songtimeellipsis">
+                <div id="songTime" class="songtime">
+                  <span id="songName2">Mann Jogiya</span>
+                  <p id="duration" class="duration">04:25</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div id="songTimeEllipsis1" class="songtimeellipsis">
+                <div id="songTime" class="songtime">
+                  <span id="songName3">Hawaijahaaj</span>
+                  <p id="Duration1" class="duration1">05:35</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div id="songTimeEllipsis2" class="songtimeellipsis">
+                <div id="songTime" class="songtime">
+                  <span id="songName4">STAY_The_Kid_LAROI_Justin_Bieber</span>
+                  <p id="Duration2" class="duration2">02:37</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div id="songTimeEllipsis3" class="songtimeellipsis">
+                <div id="songTime" class="songtime">
+                  <span id="songName5">Greedy_TateMcRae</span>
+                  <p id="Duration3" class="duration3">02:11</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
