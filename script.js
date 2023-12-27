@@ -309,7 +309,7 @@ songTimeEllipsis3.addEventListener("click", () => {
 //setting active color to home button on load and adding active color to clicked icon
 
 document.addEventListener("DOMContentLoaded", () => {
-  myHome.classList.add("active");
+  myMusicIcon.classList.add("active");
 
   icons.forEach((icon) => {
     icon.addEventListener("click", (event) => {
@@ -326,9 +326,13 @@ document.addEventListener("DOMContentLoaded", () => {
 myMusicIcon.addEventListener("click", () => {
   if (Interface.style.display === "none" || Interface.style.display === "") {
     Interface.style.display = "block";
-    myHome.classList.add("active");
+    myHome.classList.remove("active");
+  } else if (Interface.style.display === "block") {
+    Interface.style.display = "none";
+    myMusicIcon.classList.remove("active");
   }
 });
+
 
 myHome.addEventListener("click", () => {
   if (Interface.style.display === "block") {
